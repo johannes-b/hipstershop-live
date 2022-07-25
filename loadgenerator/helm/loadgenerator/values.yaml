@@ -1,0 +1,2 @@
+image: gcr.io/dynatrace-demoability/online-boutique/loadgenerator:bb9f28d
+replicaCount: 1
