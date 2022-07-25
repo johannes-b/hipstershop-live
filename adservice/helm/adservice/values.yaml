@@ -1,2 +1,2 @@
-image: gcr.io/dynatrace-demoability/online-boutique/adservice:bb9f28d
+image: gcr.io/dynatrace-demoability/online-boutique/cartservice:bb9f28d
 replicaCount: 1
