@@ -1,2 +1,2 @@
-image: redis:alpine
+image: gcr.io/dynatrace-demoability/online-boutique/redis-cart:bb9f28d
 replicaCount: 1
