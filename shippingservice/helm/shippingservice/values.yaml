@@ -1,2 +1,2 @@
-image: gcr.io/dynatrace-demoability/online-boutiques/shippingservice:bb9f28d
+image: gcr.io/dynatrace-demoability/online-boutique/shippingservice:bb9f28d
 replicaCount: 1
