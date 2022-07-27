@@ -84,6 +84,14 @@ spec:
           pass: automatic
           warning: automatic
       - name: release
+    - name: rollback
+      triggeredOn:
+      - event: prod-p.delivery.finished
+        selector:
+          match:
+            result: fail
+      tasks:
+      - name: rollback
     - name: delivery-direct
       triggeredOn:
       - event: staging.delivery-direct.finished
