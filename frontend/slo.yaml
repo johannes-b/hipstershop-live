@@ -13,7 +13,6 @@ objectives:
     pass:
       - criteria:
           - "<800"
-          - "<=+50%"
     warning:
       - criteria:
           - "<1000"
