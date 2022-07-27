@@ -45,7 +45,7 @@ spec:
           deploymentstrategy: direct
       - name: test
         properties:
-          teststrategy: ""
+          teststrategy: performance
       - name: evaluation
       - name: approval
         properties:
@@ -77,7 +77,7 @@ spec:
           deploymentstrategy: direct
       - name: test
         properties:
-          teststrategy: ""
+          teststrategy: performance
       - name: evaluation
       - name: approval
         properties:
