@@ -12,11 +12,12 @@ objectives:
     key_sli: false
     pass:
       - criteria:
-          - "<700"
+          - "<800"
+          - "<=+50%"
     warning:
       - criteria:
           - "<1000"
-    weight: 6
+    weight: 3
   - sli: error_count
     displayName: "Error count" 
     key_sli: false
@@ -26,7 +27,7 @@ objectives:
     warning:
       - criteria:
           - "<100"
-    weight: 2
+    weight: 1
   - sli: error_rate
     displayName: "Error rate" 
     key_sli: false
@@ -36,7 +37,7 @@ objectives:
     warning:
       - criteria:
           - "<2"
-    weight: 2
+    weight: 1
   - sli: throughput
     displayName: "Throughput"
     key_sli: false
