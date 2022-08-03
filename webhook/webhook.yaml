@@ -6,24 +6,8 @@ spec:
   webhooks:
     - type: sh.keptn.event.evaluation.finished
       requests:
-        - "curl --header 'Authorization:
-          {{.env.secret_dynatracemetricingest_apitoken}}' --header
-          'Content-Type: application/json' --request POST --data '{    \"type\":
-          \"test\",    \"series\": [        {            \"timeseriesId\":
-          \"custom:releasevalidationscore\",            \"dimensions\":
-          {                \"Service\":
-          \"{{.data.service}}\",                \"Stage\":
-          \"{{.data.stage}}\",                \"Project\":
-          \"{{.data.project}}\",                \"Version\":
-          \"{{.data.labels.version}}\",                \"BuildId\":
-          \"{{.data.labels.buildId}}\",                \"Result\":
-          \"{{.data.evaluation.result}}\",                \"Score\":
-          {{.data.evaluation.score}},                \"EvaluationTime\":
-          \"{{.time}}\"            },            \"dataPoints\":
-          [                [ {{.data.labels.evaltime}},
-          {{.data.evaluation.score}} ]            ]        }    ]}'
-          https://guu84124.live.dynatrace.com/api/v1/entity/infrastructure/cust\
-          om/custom:releasevalidationscore"
+        - >-
+          curl --header 'Authorization: {{.env.secret_dynatracemetricingest_apitoken}}' --header 'Content-Type: application/json' --request POST --data '{    "type": "test",    "series": [        {            "timeseriesId": "custom:releasevalidationscore",            "dimensions": {                "Service": "{{.data.service}}",                "Stage": "{{.data.stage}}",                "Project": "{{.data.project}}",                "Version": "{{.data.labels.version}}",                "BuildId": "{{.data.labels.buildId}}",                "Result": "{{.data.evaluation.result}}",                "Score": {{.data.evaluation.score}},                "EvaluationTime": "{{.time}}"            },            "dataPoints": [                [ {{.data.labels.evaltime}}, {{.data.evaluation.score}} ]            ]        }    ]}' https://guu84124.live.dynatrace.com/api/v1/entity/infrastructure/custom/custom:releasevalidationscore
       envFrom:
         - name: secret_dynatracemetricingest_apitoken
           secretRef:
@@ -31,3 +15,10 @@ spec:
             key: api-token
       subscriptionID: 71a5c5e4-dd27-4326-8354-9e68169daed4
       sendFinished: false
+    - type: sh.keptn.event.evaluation.finished
+      requests:
+        - >-
+          curl --request POST https://webhook.site/7f188023-4d69-4085-994b-5f575589dfe6
+      subscriptionID: 0c2d7b66-bb11-494d-b15c-3e0a82bab9a7
+      sendFinished: false
+      sendStarted: false
