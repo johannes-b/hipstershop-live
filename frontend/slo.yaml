@@ -17,15 +17,15 @@ objectives:
       - criteria:
           - "<1000"
     weight: 3
-  - sli: error_count
-    displayName: "Error count" 
+  - sli: cpu_time_per_request
+    displayName: "CPU time/request"
     key_sli: false
     pass:
       - criteria:
-          - "<50"
+          - "<10000"
     warning:
       - criteria:
-          - "<100"
+          - "<50000"
     weight: 1
   - sli: error_rate
     displayName: "Error rate" 
