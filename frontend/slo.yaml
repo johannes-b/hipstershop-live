@@ -12,7 +12,7 @@ objectives:
     key_sli: false
     pass:
       - criteria:
-          - "<800"
+          - "<900"
           - "<=+50%"
     warning:
       - criteria:
