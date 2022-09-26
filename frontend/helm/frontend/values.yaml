@@ -1,2 +1,2 @@
-image: gcr.io/dynatrace-demoability/online-boutique/frontend:v1.6
+image: gcr.io/dynatrace-demoability/online-boutique/frontend:v1.1
 replicaCount: 1
