@@ -12,10 +12,10 @@ objectives:
     key_sli: false
     pass:
       - criteria:
-          - "<800"
+          - "<800000"
     warning:
       - criteria:
-          - "<1000"
+          - "<1000000"
     weight: 3
   - sli: cpu_time_per_request
     displayName: "CPU time/request"
